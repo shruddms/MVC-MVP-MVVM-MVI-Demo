@@ -1,12 +1,12 @@
-package com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvp
+package com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvp.view
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.R
 
-class MVPActivity : AppCompatActivity() {
+class MVPResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mvp)
+        setContentView(R.layout.activity_mvpresult)
     }
 }

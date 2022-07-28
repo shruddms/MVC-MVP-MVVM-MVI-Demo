@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.databinding.ActivityMainBinding
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvc.controller.MVCActivity
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvi.MVIActivity
-import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvp.MVPActivity
+import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvp.view.MVPActivity
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvvm.MVVMActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {

@@ -2,8 +2,6 @@ package com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvc.controller
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.MainActivity

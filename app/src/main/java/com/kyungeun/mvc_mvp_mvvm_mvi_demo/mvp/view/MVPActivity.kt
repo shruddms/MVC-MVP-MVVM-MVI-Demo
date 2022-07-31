@@ -1,10 +1,12 @@
 package com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvp.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.R
+import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvc.controller.MVCResultActivity
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvp.presenter.Contract
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvp.presenter.MVPPresenter
 
@@ -28,10 +30,16 @@ class MVPActivity : AppCompatActivity(), Contract.View {
         submitBtn = findViewById(R.id.submitBtn)
 
         submitBtn.setOnClickListener {
-
+            presenter.setMemo(titleEditText.text.toString(),contentsEditText.text.toString())
         }
     }
 
+    override fun nextActivity(title: String, contents: String) {
+        val resultIntent = Intent(this, MVPResultActivity::class.java)
+        resultIntent.putExtra("title",title)
+        resultIntent.putExtra("contents",contents)
+        startActivity(resultIntent)
+    }
 
 
 }

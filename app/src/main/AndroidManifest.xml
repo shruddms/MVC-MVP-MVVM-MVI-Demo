@@ -14,7 +14,7 @@
         android:theme="@style/Theme.MVCMVPMVVMMVIDemo"
         tools:targetApi="31">
         <activity
-            android:name=".MVPResultActivity"
+            android:name=".mvp.view.MVPResultActivity"
             android:exported="false" />
         <activity
             android:name=".mvc.controller.MVCResultActivity"

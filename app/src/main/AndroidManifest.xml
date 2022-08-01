@@ -14,6 +14,9 @@
         android:theme="@style/Theme.MVCMVPMVVMMVIDemo"
         tools:targetApi="31">
         <activity
+            android:name=".MVVMResultActivity"
+            android:exported="false" />
+        <activity
             android:name=".mvp.view.MVPResultActivity"
             android:exported="false" />
         <activity
@@ -29,7 +32,7 @@
             android:name=".mvp.view.MVPActivity"
             android:exported="true" />
         <activity
-            android:name=".mvvm.MVVMActivity"
+            android:name=".mvvm.view.MVVMActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

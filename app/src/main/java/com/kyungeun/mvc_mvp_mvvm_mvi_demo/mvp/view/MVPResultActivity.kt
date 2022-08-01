@@ -4,12 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.MainActivity
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.R
-import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvc.controller.MVCResultActivity
-import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvc.model.Memo
 
 class MVPResultActivity : AppCompatActivity() {
 
@@ -19,7 +16,7 @@ class MVPResultActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mvpresult)
+        setContentView(R.layout.activity_mvp_result)
 
         titleTextView = findViewById(R.id.titleTextView)
         contentsTextView = findViewById(R.id.contentsTextView)

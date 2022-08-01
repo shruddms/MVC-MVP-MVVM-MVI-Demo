@@ -17,6 +17,9 @@
             android:name=".MVVMResultActivity"
             android:exported="false" />
         <activity
+            android:name=".mvvm.view.MVVMResultActivity"
+            android:exported="false" />
+        <activity
             android:name=".mvp.view.MVPResultActivity"
             android:exported="false" />
         <activity

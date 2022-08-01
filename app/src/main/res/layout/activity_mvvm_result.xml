@@ -3,8 +3,14 @@
 
     <data>
         <variable
-            name="viewModel"
-            type="com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvvm.viewmodel.MVVMViewModel" />
+            name="activity"
+            type="com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvvm.view.MVVMResultActivity" />
+        <variable
+            name="title"
+            type="String" />
+        <variable
+            name="contents"
+            type="String" />
     </data>
 
     <LinearLayout
@@ -16,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:text="@{viewModel.memo.title}"
+            android:text="@{title}"
             android:theme="@style/TitleTextViewStyle" />
 
         <View
@@ -28,12 +34,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:text="@{viewModel.memo.contents}" />
+            android:text="@{contents}" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Go Home"
+            android:onClick="@{() -> activity.nextActivity()}"
             android:textAllCaps="false"
             android:textSize="15sp"
             android:textColor="@android:color/black"

@@ -1,52 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mvc.controller.MVCResultActivity">
 
-    <data>
-        <variable
-            name="activity"
-            type="com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvc.controller.MVCResultActivity" />
-        <variable
-            name="title"
-            type="String" />
-        <variable
-            name="contents"
-            type="String" />
-    </data>
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:theme="@style/TitleTextViewStyle" />
 
-    <LinearLayout
+    <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="0.5dp"
+        android:background="@color/gray" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:text="@{title}"
-            android:theme="@style/TitleTextViewStyle" />
+    <TextView
+        android:id="@+id/contentsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="@color/gray" />
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Go Home"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:backgroundTint="@color/gray"
+        android:layout_margin="20dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:text="@{contents}" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Go Home"
-            android:onClick="@{() -> activity.nextActivity()}"
-            android:textAllCaps="false"
-            android:textSize="15sp"
-            android:textColor="@android:color/black"
-            android:backgroundTint="@color/gray"
-            android:layout_margin="20dp" />
-
-    </LinearLayout>
-
-</layout>
+</androidx.appcompat.widget.LinearLayoutCompat>

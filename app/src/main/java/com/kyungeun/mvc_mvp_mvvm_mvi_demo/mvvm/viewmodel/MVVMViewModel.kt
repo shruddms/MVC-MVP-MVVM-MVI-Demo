@@ -1,56 +1,31 @@
 package com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvvm.viewmodel
 
-import android.content.Intent
+import android.util.Log
 import androidx.lifecycle.*
+import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvvm.Event
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvvm.model.Memo
-import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvvm.view.MVVMResultActivity
 
 
 class MVVMViewModel : ViewModel() {
 
-//    private val memo = MutableLiveData<Memo>()
-
-    var memo = MutableLiveData<Memo>()
-
-
-
-
+    private var _liveData = MutableLiveData<Memo>()
+    val liveData : LiveData<Memo>
+        get() = _liveData
 
     private val _openEvent = MutableLiveData<Event<Memo>>()
-    val openEvent: LiveData<Event<Memo>> get() = _openEvent
+    val openEvent: LiveData<Event<Memo>>
+        get() = _openEvent
 
+    init {
+        _liveData.value = Memo("a","b")
+    }
 
-
-    val liveData: LiveData<Memo>
-        get() = memo
-
-//    val title = MutableLiveData<String>()
-//    val contents = MutableLiveData<String>()
-
-    fun onClickEvent(memo: Memo) {
+    fun submit(memo: Memo) {
+        _liveData.postValue(memo)
         _openEvent.value = Event(memo)
     }
 
 
-
-
-
-
-
-
-
-
-//    fun loadData() = viewModelScope.launch {
-//        _liveData.value = Memo("title","contents")
-//    }
-
-//    fun setMemo(title: String, contents: String) {
-//        _liveData.postValue(Memo(title,contents))
-//    }
-
-    fun submit(title: String, contents: String) {
-
-    }
 
 }
 
@@ -66,3 +41,4 @@ inline fun <T> LiveData<Event<T>>.eventObserve(
     observe(owner, wrappedObserver)
     return wrappedObserver
 }
+

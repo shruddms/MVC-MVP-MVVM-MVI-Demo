@@ -4,28 +4,27 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProvider
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.MainActivity
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.R
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.databinding.ActivityMvvmResultBinding
-import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvvm.viewmodel.MVVMViewModel
-import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvvm.viewmodel.eventObserve
 
 class MVVMResultActivity : AppCompatActivity() {
 
-//    private lateinit var binding : ActivityMvvmResultBinding
-    private val viewModel: MVVMViewModel by lazy {
-        ViewModelProvider(this).get(MVVMViewModel::class.java)
-    }
+    private lateinit var binding : ActivityMvvmResultBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        binding = DataBindingUtil.setContentView(this, R.layout.activity_mvvm_result)
-//        binding.activity = this@MVVMResultActivity
+        setContentView(R.layout.activity_mvvm_result)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_mvvm_result)
+        binding.activity = this@MVVMResultActivity
 
-
-
+        binding.title =  intent.extras?.get("title") as String
+        binding.contents =  intent.extras?.get("contents") as String
     }
 
-
+    fun nextActivity() {
+        val mainIntent = Intent(this, MainActivity::class.java)
+        mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        startActivity(mainIntent)
+    }
 }

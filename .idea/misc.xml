@@ -9,11 +9,13 @@
         <entry key="app/src/main/res/layout/activity_mvcactivity.xml" value="0.20774078369140625" />
         <entry key="app/src/main/res/layout/activity_mvi.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_mviactivity.xml" value="0.15520833333333334" />
+        <entry key="app/src/main/res/layout/activity_mviresult.xml" value="0.14628623188405798" />
         <entry key="app/src/main/res/layout/activity_mvp.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_mvp_result.xml" value="0.13247213779128672" />
         <entry key="app/src/main/res/layout/activity_mvpactivity.xml" value="0.15520833333333334" />
         <entry key="app/src/main/res/layout/activity_mvpresult.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_mvvm.xml" value="0.19239373601789708" />
+        <entry key="app/src/main/res/layout/activity_mvvm_result.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_mvvmresult.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_result.xml" value="0.2912948608398438" />
         <entry key="app/src/main/res/layout/fragment_insert.xml" value="0.12360688956433637" />

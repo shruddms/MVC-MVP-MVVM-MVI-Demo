@@ -10,9 +10,9 @@ import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvc.model.Memo
 
 class MVCActivity : AppCompatActivity() {
 
-    lateinit var titleEditText: EditText
-    lateinit var contentsEditText: EditText
-    lateinit var submitBtn: Button
+    private lateinit var titleEditText: EditText
+    private lateinit var contentsEditText: EditText
+    private lateinit var submitBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

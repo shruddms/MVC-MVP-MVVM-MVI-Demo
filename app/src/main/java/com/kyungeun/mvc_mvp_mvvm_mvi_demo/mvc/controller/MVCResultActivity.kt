@@ -5,16 +5,14 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.MainActivity
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.R
-import com.kyungeun.mvc_mvp_mvvm_mvi_demo.databinding.ActivityMvcResultBinding
 
 class MVCResultActivity : AppCompatActivity() {
 
-    lateinit var titleTextView: TextView
-    lateinit var contentsTextView: TextView
-    lateinit var nextBtn: Button
+    private lateinit var titleTextView: TextView
+    private lateinit var contentsTextView: TextView
+    private lateinit var nextBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

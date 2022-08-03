@@ -6,18 +6,17 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.R
-import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvc.controller.MVCResultActivity
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvp.presenter.Contract
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvp.presenter.MVPPresenter
 
 
 class MVPActivity : AppCompatActivity(), Contract.View {
 
-    lateinit var titleEditText: EditText
-    lateinit var contentsEditText: EditText
-    lateinit var submitBtn: Button
+    private lateinit var titleEditText: EditText
+    private lateinit var contentsEditText: EditText
+    private lateinit var submitBtn: Button
 
-    lateinit var presenter: Contract.Presenter
+    private lateinit var presenter: Contract.Presenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -1,6 +1,5 @@
 package com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvvm.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.*
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvvm.Event
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvvm.model.Memo

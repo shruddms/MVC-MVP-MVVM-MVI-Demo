@@ -4,22 +4,33 @@ Android MVC MVP MVVM MVI design pattern learning
 
 The project using MVC/MVP/MVVM/MVI design pattern creating a simple Demo.
 
+MVC
+------------------------------------
 
+MVP
+------------------------------------
 
+MVVM
+------------------------------------
+
+MVI
+------------------------------------
+framework: [Orbit](https://github.com/orbit-mvi/orbit-mvi) were used.
 
 # Preview
-------------------------------------
-![](https://user-images.githubusercontent.com/74607521/182528204-a33bc964-dece-4033-854e-624264514a8e.png)
-![](https://user-images.githubusercontent.com/74607521/182528199-c1a26c70-53cb-44e9-8f3d-125b41f9aa88.png)
-![](https://user-images.githubusercontent.com/74607521/182528186-d16c575c-3a8a-48a1-a9e5-29059e28bbd7.png)
 
+<div>
+<img src="https://user-images.githubusercontent.com/74607521/182528204-a33bc964-dece-4033-854e-624264514a8e.png" width="30%"/>
+<img src="https://user-images.githubusercontent.com/74607521/182528199-c1a26c70-53cb-44e9-8f3d-125b41f9aa88.png" width="30%"/>
+<img src="https://user-images.githubusercontent.com/74607521/182528186-d16c575c-3a8a-48a1-a9e5-29059e28bbd7.png" width="30%"/>
+</div>
 
-Developed By
-------------------------------------
+# Developed By
+
 * NoKyungEun - <eunn.dev@gmail.com>
 
-License
-------------------------------------
+# License
+
     Copyright 2022 NoKyungEun
 
     Licensed under the Apache License, Version 2.0 (the "License");

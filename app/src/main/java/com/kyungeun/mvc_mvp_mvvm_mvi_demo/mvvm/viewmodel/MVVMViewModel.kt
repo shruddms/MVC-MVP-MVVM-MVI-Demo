@@ -4,28 +4,24 @@ import androidx.lifecycle.*
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvvm.Event
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvvm.model.Memo
 
-
 class MVVMViewModel : ViewModel() {
 
     private var _liveData = MutableLiveData<Memo>()
-    val liveData : LiveData<Memo>
+    val liveData: LiveData<Memo>
         get() = _liveData
 
     private val _openEvent = MutableLiveData<Event<Memo>>()
     val openEvent: LiveData<Event<Memo>>
         get() = _openEvent
 
-    init {
-        _liveData.value = Memo("a","b")
-    }
+//    init {
+//        _liveData.value = Memo("test a","test b")
+//    }
 
     fun submit(memo: Memo) {
         _liveData.postValue(memo)
         _openEvent.value = Event(memo)
     }
-
-
-
 }
 
 inline fun <T> LiveData<Event<T>>.eventObserve(
@@ -40,4 +36,3 @@ inline fun <T> LiveData<Event<T>>.eventObserve(
     observe(owner, wrappedObserver)
     return wrappedObserver
 }
-

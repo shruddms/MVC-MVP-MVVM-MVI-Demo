@@ -23,13 +23,12 @@ class MVCActivity : AppCompatActivity() {
         submitBtn = findViewById(R.id.submitBtn)
 
         submitBtn.setOnClickListener {
-            val model = Memo(titleEditText.text.toString(),contentsEditText.text.toString())
+            val model = Memo(titleEditText.text.toString(), contentsEditText.text.toString())
 
             val resultIntent = Intent(this, MVCResultActivity::class.java)
-            resultIntent.putExtra("title",model.title)
-            resultIntent.putExtra("contents",model.contents)
+            resultIntent.putExtra("title", model.title)
+            resultIntent.putExtra("contents", model.contents)
             startActivity(resultIntent)
         }
     }
-
 }

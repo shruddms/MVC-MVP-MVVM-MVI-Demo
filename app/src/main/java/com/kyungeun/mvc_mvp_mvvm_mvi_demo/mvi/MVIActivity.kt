@@ -9,7 +9,7 @@ import org.orbitmvi.orbit.viewmodel.observe
 
 class MVIActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityMviBinding
+    private lateinit var binding: ActivityMviBinding
 
     private val viewModel: MemoViewModel by lazy {
         ViewModelProvider(this)[MemoViewModel::class.java]
@@ -21,7 +21,7 @@ class MVIActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.submitBtn.setOnClickListener {
-            viewModel.submit(binding.titleEditText.text.toString(),binding.contentsEditText.text.toString())
+            viewModel.submit(binding.titleEditText.text.toString(), binding.contentsEditText.text.toString())
         }
 
         viewModel.observe(lifecycleOwner = this, state = ::render, sideEffect = ::handleSideEffect)
@@ -35,8 +35,8 @@ class MVIActivity : AppCompatActivity() {
             is MemoStateSideEffect.Submit
             -> {
                 val resultIntent = Intent(this, MVIResultActivity::class.java)
-                resultIntent.putExtra("title",sideEffect.title)
-                resultIntent.putExtra("contents",sideEffect.contents)
+                resultIntent.putExtra("title", sideEffect.title)
+                resultIntent.putExtra("contents", sideEffect.contents)
                 startActivity(resultIntent)
             }
         }

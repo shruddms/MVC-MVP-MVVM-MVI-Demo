@@ -10,10 +10,9 @@ import com.kyungeun.mvc_mvp_mvvm_mvi_demo.databinding.ActivityMvvmBinding
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvvm.viewmodel.MVVMViewModel
 import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvvm.viewmodel.eventObserve
 
-
 class MVVMActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityMvvmBinding
+    private lateinit var binding: ActivityMvvmBinding
 
     private val viewModel: MVVMViewModel by lazy {
         ViewModelProvider(this)[MVVMViewModel::class.java]
@@ -28,7 +27,7 @@ class MVVMActivity : AppCompatActivity() {
         initObserve()
     }
 
-    //변경된 데이터를 활용하여 View 업데이트 처리 동작
+    // 변경된 데이터를 활용하여 View 업데이트 처리 동작
     @SuppressLint("SetTextI18n")
     private fun initObserve() {
         viewModel.liveData.observe(this) { memo ->
@@ -36,12 +35,11 @@ class MVVMActivity : AppCompatActivity() {
         }
 
         viewModel.openEvent.eventObserve(this) { memo ->
-            Log.d("openEvent eventObserve",memo.toString())
+            Log.d("openEvent eventObserve", memo.toString())
             val resultIntent = Intent(this, MVVMResultActivity::class.java)
-            resultIntent.putExtra("title",memo.title)
-            resultIntent.putExtra("contents",memo.contents)
+            resultIntent.putExtra("title", memo.title)
+            resultIntent.putExtra("contents", memo.contents)
             startActivity(resultIntent)
         }
     }
-
 }

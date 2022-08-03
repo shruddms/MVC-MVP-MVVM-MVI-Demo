@@ -12,7 +12,7 @@ class MemoViewModel : ContainerHost<MemoState, MemoStateSideEffect>, ViewModel()
     override val container = container<MemoState, MemoStateSideEffect>(MemoState())
 
     fun submit(title: String, contents: String) = intent {
-        postSideEffect(MemoStateSideEffect.Submit(title,contents))
+        postSideEffect(MemoStateSideEffect.Submit(title, contents))
 
         reduce {
             state.copy(title = state.title, contents = state.contents)

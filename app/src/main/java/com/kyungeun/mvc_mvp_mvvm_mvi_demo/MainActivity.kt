@@ -12,7 +12,7 @@ import com.kyungeun.mvc_mvp_mvvm_mvi_demo.mvvm.view.MVVMActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
-    lateinit var binding : ActivityMainBinding
+    lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.mvpBtn.setOnClickListener(this)
         binding.mvvmBtn.setOnClickListener(this)
         binding.mviBtn.setOnClickListener(this)
-
     }
 
     override fun onClick(p0: View?) {

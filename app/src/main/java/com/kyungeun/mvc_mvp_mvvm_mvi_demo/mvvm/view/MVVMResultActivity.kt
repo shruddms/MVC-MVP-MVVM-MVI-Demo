@@ -10,15 +10,15 @@ import com.kyungeun.mvc_mvp_mvvm_mvi_demo.databinding.ActivityMvvmResultBinding
 
 class MVVMResultActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityMvvmResultBinding
+    private lateinit var binding: ActivityMvvmResultBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_mvvm_result)
         binding.activity = this@MVVMResultActivity
 
-        binding.title =  intent.extras?.get("title") as String
-        binding.contents =  intent.extras?.get("contents") as String
+        binding.title = intent.extras?.get("title") as String
+        binding.contents = intent.extras?.get("contents") as String
     }
 
     fun nextActivity() {

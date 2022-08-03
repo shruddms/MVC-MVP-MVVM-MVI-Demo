@@ -12,6 +12,6 @@ class MVPPresenter(view: Contract.View) : Contract.Presenter {
     }
 
     override fun setMemo(title: String, contents: String) {
-       view.nextActivity(title, contents)
+        view.nextActivity(title, contents)
     }
 }

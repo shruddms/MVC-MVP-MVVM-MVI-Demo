@@ -22,8 +22,8 @@ class MVCResultActivity : AppCompatActivity() {
         contentsTextView = findViewById(R.id.contentsTextView)
         nextBtn = findViewById(R.id.nextBtn)
 
-        val title =  intent.extras?.get("title") as String
-        val contents =  intent.extras?.get("contents") as String
+        val title = intent.extras?.get("title") as String
+        val contents = intent.extras?.get("contents") as String
         titleTextView.text = title
         contentsTextView.text = contents
 

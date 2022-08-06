@@ -1,21 +1,23 @@
 # MVC-MVP-MVVM-MVI-Demo
 
-Android MVC MVP MVVM MVI design pattern learning
-
 The project using MVC/MVP/MVVM/MVI design pattern creating a simple Demo.
 
-MVC
+MVC (Model View Controller)
 ------------------------------------
+![](https://user-images.githubusercontent.com/74607521/183239726-c5649a41-229b-4010-8c31-4fdea766d940.png)
 
-MVP
+MVP (Model View Presenter)
 ------------------------------------
+![](https://user-images.githubusercontent.com/74607521/183239731-40e6d251-c442-4d52-8083-ad5bcf463808.png)
 
-MVVM
+MVVM (Model View View-Model)
 ------------------------------------
+![](https://user-images.githubusercontent.com/74607521/183239732-40e902ae-9fa7-4d6f-9989-3f995728ee37.png)
 
-MVI
+MVI (Model View Intent)
 ------------------------------------
 framework: [Orbit](https://github.com/orbit-mvi/orbit-mvi) were used.
+![](https://user-images.githubusercontent.com/74607521/183239730-ec8ccfd7-f519-4433-bad3-844d5806a89f.png)
 
 # Preview
 
